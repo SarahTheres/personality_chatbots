@@ -1,0 +1,43 @@
+QQBot MongoDB init
+-----
+Create new database w/o authentication:
+New Terminal
+mongod --port 27017 --dbpath <yourDBpath>
+
+Enable authentication by adding admin
+New Terminal
+mongo --port 27017
+
+use admin
+db.createUser(
+  {
+    user: "REMOVED",
+    pwd: "REMOVED",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+  }
+)
+db.adminCommand( { shutdown: 1 } )
+
+to start the database w/ authentication:
+New Terminal
+mongod --auth --port 27017 --dbpath <yourDBpath>
+
+To add the bot user, log in as admin:
+New Terminal
+mongo --port 27017  --authenticationDatabase "admin" -u "REMOVED" -p "REMOVED"
+use admin
+db.createUser(
+  {
+    user: "qqbot",
+    pwd:  "4bd!gzhP",
+    roles: [ "readWriteAnyDatabase"]
+  }
+)
+
+bot connects to database using URI
+mongodb://qqbot:4bd!gzhP@localhost
+
+admin connects to database using URI
+mongodb://qqbot-admin:6.HSAwfg0@localhost
+
+Authentication Database ist "admin"

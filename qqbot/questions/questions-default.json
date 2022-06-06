@@ -1,0 +1,879 @@
+[
+  {
+
+    "py/object": "objects.QuestionnaireJson",
+    "id": "init-default",
+    "title": "Welcome",
+    "schedule": "immediate",
+    "release_date_str": "2020-04-24T10:25:43.511Z",
+    "best_before_date_str": "2022-04-24T10:25:43.511Z",
+    "optional": false,
+    "questions": [
+      {
+        "py/object": "objects.Question",
+        "id": "init01-default",
+        "index": 1,
+        "question": "Welcome to the study. \nFirst of all, please make sure your push notifications are enabled to receive the chatbot's messages every day. \nIn the survey, you just finished, you were asked to create your own survey ID (in this format: A0201CB). Please enter your survey ID now to continue with the study.",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "index": 1,
+            "next": ""
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "init0102-default",
+        "index": 1,
+        "question": "Do you confirm that this is your survey ID: {qid}",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "init02-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "init0103-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "init0103-default",
+        "index": 1,
+        "question": "Please enter your survey ID again",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "index": 1,
+            "next": ""
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "init02-default",
+        "index": 2,
+        "question": "Hi, my name is Diane. Thank you for participating in this study. I'm here to measure your stress and help you cope with it. Therefore, I will text you everyday and ask you to answer some short questions. After three days, I will show you how stressed you've been over the last days and give you some advice on your coping behaviour. First of all, please type in your name (for example: 'James').",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "index": 1,
+            "next": "start_notifcation_time01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "init02name-default",
+        "index": 2,
+        "question": "Okay, then please type in how you want me to call you.",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "index": 1,
+            "next": "start_notifcation_time01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "start_notifcation_time01-default",
+        "index": 3,
+        "question": "Nice to meet you, {name}. \nAs I told you before, I will text you every day. You will get my messages to random points in time. You can now choose the earliest and latest time I should send a message. So, from what time to what time would you like me to text you during the day? Please first indicate the earliest time I should text you.",
+        "question_type": "times",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "8am",
+            "meta": "start:8",
+            "index": 1,
+            "next": "stop_notifcation_time01-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "9am",
+            "meta": "start:9",
+            "index": 2,
+            "next": "stop_notifcation_time01-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "10am",
+            "meta": "start:10",
+            "index": 3,
+            "next": "stop_notifcation_time01-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "11am",
+            "meta": "start:11",
+            "index": 4,
+            "next": "stop_notifcation_time01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "stop_notifcation_time01-default",
+        "index": 4,
+        "question": "Please also indicate the latest time I should text you.",
+        "question_type": "times",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "8pm",
+            "meta": "stop:20",
+            "index": 1,
+            "next": "time_done"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "9pm",
+            "meta": "stop:21",
+            "index": 2,
+            "next": "time_done"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "10pm",
+            "meta": "stop:22",
+            "index": 3,
+            "next": "time_done"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "11pm",
+            "meta": "stop:23",
+            "index": 4,
+            "next": "time_done"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "py/object": "objects.QuestionnaireJson",
+    "id": "es01-default",
+    "title": "ES_Questionnaire",
+    "schedule": "daily",
+    "release_date_str": "2020-04-24T10:25:43.511Z",
+    "best_before_date_str": "2022-04-23T18:25:43.511Z",
+    "optional": false,
+    "personality": 0,
+    "questions": [
+      {
+        "py/object": "objects.Question",
+        "id": "es0101t-default",
+        "index": 1,
+        "question": "Let's detect your stress level today. Please answer the following questions: \nDid you have an argument or disagreement with anyone since (this time/we spoke) yesterday?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "ft-es0101a-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "es0102-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "es0101-default",
+        "index": 1,
+        "question": "Please answer the following questions: \nDid you have an argument or disagreement with anyone since (this time/we spoke) yesterday?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "ft-es0101a-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "es0102-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es0101a-default",
+        "index": 2,
+        "question": "Think of the most stressful disagreement or argument you had since (this time/we spoke) yesterday. Who was that with?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es0101b-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es0101b-default",
+        "index": 3,
+        "question": "What kinds of things were said?",
+        "question_type": "free-text-max",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "es0102-default",
+        "index": 4,
+        "question": "Since (this time/we spoke) yesterday, did anything happen that you could have argued about but you decided to let pass in order to avoid a disagreement?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "ft-es0102a-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "es0103-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es0102a-default",
+        "index": 5,
+        "question": "Think of the most stressful incident of this sort that you experienced since (this time/we spoke) yesterday. Who was the person you decided not to argue with?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es0102b-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es0102b-default",
+        "index": 6,
+        "question": "What happened and why did you decide not to get into an argument about it?",
+        "question_type": "free-text-max",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es0101b-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "es0103-default",
+        "index": 7,
+        "question": "Since (this time/we spoke) yesterday, did anything happen at work or school (other than what you have already mentioned) that most people would consider stressful?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "ft-es0103a-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "es0104-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es0103a-default",
+        "index": 8,
+        "question": "How does this affect your job?",
+        "question_type": "free-text-max",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "es0104-default",
+        "index": 9,
+        "question": "Since (this time/we spoke) yesterday, did anything happen at home (other than what you have already mentioned) that most people would consider stressful?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "ft-es01all01-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "es0105-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "es0105-default",
+        "index": 10,
+        "question": "Many people experience discrimination on the basis of such things as race, sex, or age. Did anything like this happen to you since (this time/we spoke) yesterday?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "ft-es0105a-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "es0106-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es0105a-default",
+        "index": 11,
+        "question": "Think of the most stressful incident of this sort that you experienced since (this time/we spoke) yesterday. What was the basis for the discrimination you experienced—your race, sex, age, or something else?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "es0106-default",
+        "index": 12,
+        "question": "Since (this time/we spoke) yesterday, did anything happen to a close friend or relative (other than what you have already mentioned) that turned out to be stressful for you?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "ft-es0106a-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "es0107-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es0106a-default",
+        "index": 13,
+        "question": "Think of the most stressful incident of this sort that you experienced since (this time/we spoke) yesterday. Who did this happen to?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "es0107-default",
+        "index": 14,
+        "question": "Did anything else happen to you since (this time/we spoke) yesterday that most people would consider stressful?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": "Yes",
+            "next": "ft-es01all01-default"
+          },
+          {
+            "index": 2,
+            "py/object": "objects.Answer",
+            "answer": "No",
+            "next": "es_done"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es01all01-default",
+        "index": 15,
+        "question": "When did that happen? Was that some time yesterday or today?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all02-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es01all02-default",
+        "index": 16,
+        "question": "What happened and what about it would most people consider stressful?",
+        "question_type": "free-text-max",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all03-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es01all03-default",
+        "index": 17,
+        "question": "Have you had any problems with this in the past? If yes, please briefly explain.",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all04-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es01all04-default",
+        "index": 18,
+        "question": "How long has this been going on?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all05-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es01all05-default",
+        "index": 19,
+        "question": "Does this happen often?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ft-es01all06-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ft-es01all06-default",
+        "index": 20,
+        "question": "Was there anything out of the ordinary in this?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "ss01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "ss01-default",
+        "index": 21,
+        "question": "How stressful was this for you?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not at all",
+            "index": 1,
+            "next": "variable"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not very",
+            "index": 2,
+            "next": "pa01-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Somewhat",
+            "index": 3,
+            "next": "pa01-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Very",
+            "index": 4,
+            "next": "pa01-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "pa01-default",
+        "index": 22,
+        "question": "How much were the following things at risk in this situation: \nFirst, how much did it risk disrupting your daily routine?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not at all",
+            "index": 1,
+            "next": "pa02-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A little",
+            "index": 2,
+            "next": "pa02-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Some",
+            "index": 3,
+            "next": "pa02-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A lot",
+            "index": 4,
+            "next": "pa02-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "pa02-default",
+        "index": 23,
+        "question": "How much did it risk your financial situation?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not at all",
+            "index": 1,
+            "next": "pa03-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A little",
+            "index": 2,
+            "next": "pa03-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Some",
+            "index": 3,
+            "next": "pa03-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A lot",
+            "index": 4,
+            "next": "pa03-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "pa03-default",
+        "index": 24,
+        "question": "How much did it risk the way you feel about yourself?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not at all",
+            "index": 1,
+            "next": "pa04-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A little",
+            "index": 2,
+            "next": "pa04-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Some",
+            "index": 3,
+            "next": "pa04-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A lot",
+            "index": 4,
+            "next": "pa04-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "pa04-default",
+        "index": 25,
+        "question": "How much did it risk the way other people feel about you?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not at all",
+            "index": 1,
+            "next": "pa05-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A little",
+            "index": 2,
+            "next": "pa05-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Some",
+            "index": 3,
+            "next": "pa05-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A lot",
+            "index": 4,
+            "next": "pa05-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "pa05-default",
+        "index": 26,
+        "question": "How much did it risk your physical health or safety?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not at all",
+            "index": 1,
+            "next": "pa06-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A little",
+            "index": 2,
+            "next": "pa06-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Some",
+            "index": 3,
+            "next": "pa06-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A lot",
+            "index": 4,
+            "next": "pa06-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "pa06-default",
+        "index": 27,
+        "question": "How much did it risk the health or well-being of someone you care about?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not at all",
+            "index": 1,
+            "next": "pa07-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A little",
+            "index": 2,
+            "next": "pa07-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Some",
+            "index": 3,
+            "next": "pa07-default"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A lot",
+            "index": 4,
+            "next": "pa07-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "pa07-default",
+        "index": 28,
+        "question": "How much did it risk your plans for the future?",
+        "question_type": "single-choice",
+        "answers": [
+          {
+            "py/object": "objects.Answer",
+            "answer": "Not at all",
+            "index": 1,
+            "next": "variable"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A little",
+            "index": 2,
+            "next": "variable"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "Some",
+            "index": 3,
+            "next": "variable"
+          },
+          {
+            "py/object": "objects.Answer",
+            "answer": "A lot",
+            "index": 4,
+            "next": "variable"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "py/object": "objects.QuestionnaireJson",
+    "id": "fs01-default",
+    "title": "FS_Questionnaire",
+    "schedule": "daily",
+    "release_date_str": "2020-04-24T10:25:43.511Z",
+    "best_before_date_str": "2022-04-23T18:25:43.511Z",
+    "optional": false,
+    "questions": [
+      {
+        "py/object": "objects.Question",
+        "id": "fs0101-default",
+        "index": 1,
+        "question": "Please think about this report. \nDo you think this level of stress is good for you?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "fs0102-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "fs0102-default",
+        "index": 2,
+        "question": "Do you think you could change something in the future?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "fs0103-default"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "fs0103-default",
+        "index": 3,
+        "question": "Do you think my measures are correct?",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "fs_done"
+          }
+        ]
+      },
+      {
+        "py/object": "objects.Question",
+        "id": "fs_code-default",
+        "index": 4,
+        "question": "Please type in the code when you've finished the questionnaire.",
+        "question_type": "free-text",
+        "answers": [
+          {
+            "index": 1,
+            "py/object": "objects.Answer",
+            "answer": " ",
+            "next": "code"
+          }
+        ]
+      }
+    ]
+  }
+]
